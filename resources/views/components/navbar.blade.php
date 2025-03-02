@@ -1,61 +1,63 @@
-<nav class="bg-primary text-light shadow-md">
+<!-- resources/views/components/navbar.blade.php -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center py-4">
-            <!-- Logo dan Nama -->
-            <div class="flex items-center space-x-2">
-                <a href="/" class="text-2xl font-bold">MiniMarket</a>
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="/" class="flex items-center">
+                    <span class="text-primary font-bold text-2xl">Mini<span class="text-secondary">Market</span></span>
+                </a>
             </div>
             
             <!-- Search Bar -->
             <div class="hidden md:block flex-grow mx-10">
-                <form action="/search" method="GET" class="flex">
-                    <input type="text" name="query" placeholder="Cari produk..." 
-                           class="w-full px-4 py-2 rounded-l-lg text-dark focus:outline-none">
-                    <button type="submit" class="bg-secondary px-4 py-2 rounded-r-lg hover:bg-opacity-90">
+                <form action="/search" method="GET" class="relative">
+                    <input type="text" name="q" placeholder="Cari produk..." class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                    <button type="submit" class="absolute right-0 top-0 h-full px-4 text-gray-500 hover:text-primary">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
             </div>
             
-            <!-- Menu -->
-            <div class="flex items-center space-x-6">
-                <a href="/cart" class="hover:text-secondary">
+            <!-- Navigation Links -->
+            <div class="flex items-center space-x-4">
+                <a href="/cart" class="text-gray-700 hover:text-primary relative">
                     <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
                 </a>
-                <a href="/profile" class="hover:text-secondary">
+                <a href="/account" class="text-gray-700 hover:text-primary">
                     <i class="fas fa-user text-xl"></i>
                 </a>
-                <div class="relative group">
-                    <button class="hover:text-secondary">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
-                        <a href="/category/makanan" class="block px-4 py-2 text-dark hover:bg-secondary hover:text-light">Makanan</a>
-                        <a href="/category/minuman" class="block px-4 py-2 text-dark hover:bg-secondary hover:text-light">Minuman</a>
-                        <a href="/category/sayuran" class="block px-4 py-2 text-dark hover:bg-secondary hover:text-light">Sayuran</a>
-                        <a href="/category/snack" class="block px-4 py-2 text-dark hover:bg-secondary hover:text-light">Snack</a>
-                    </div>
-                </div>
+                <button class="md:hidden text-gray-700 hover:text-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
         </div>
         
-        <!-- Mobile Search (visible on small screens) -->
+        <!-- Mobile Search (visible only on mobile) -->
         <div class="md:hidden pb-4">
-            <form action="/search" method="GET" class="flex">
-                <input type="text" name="query" placeholder="Cari produk..." 
-                       class="w-full px-4 py-2 rounded-l-lg text-dark focus:outline-none">
-                <button type="submit" class="bg-secondary px-4 py-2 rounded-r-lg hover:bg-opacity-90">
+            <form action="/search" method="GET" class="relative">
+                <input type="text" name="q" placeholder="Cari produk..." class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                <button type="submit" class="absolute right-0 top-0 h-full px-4 text-gray-500 hover:text-primary">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
         </div>
-        
-        <!-- Category Navigation -->
-        <div class="flex overflow-x-auto pb-2 space-x-4 text-sm">
-            <a href="/category/makanan" class="whitespace-nowrap px-3 py-2 rounded-full bg-secondary hover:bg-opacity-80">Makanan</a>
-            <a href="/category/minuman" class="whitespace-nowrap px-3 py-2 rounded-full bg-secondary hover:bg-opacity-80">Minuman</a>
-            <a href="/category/sayuran" class="whitespace-nowrap px-3 py-2 rounded-full bg-secondary hover:bg-opacity-80">Sayuran</a>
-            <a href="/category/snack" class="whitespace-nowrap px-3 py-2 rounded-full bg-secondary hover:bg-opacity-80">Snack</a>
+    </div>
+    
+    <!-- Category Navigation -->
+    <div class="bg-light">
+        <div class="container mx-auto px-4">
+            <div class="flex overflow-x-auto py-2 space-x-4 no-scrollbar">
+                <a href="/category/makanan" class="whitespace-nowrap px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">Makanan</a>
+                <a href="/category/minuman" class="whitespace-nowrap px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">Minuman</a>
+                <a href="/category/sayuran" class="whitespace-nowrap px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">Sayuran</a>
+                <a href="/category/buah" class="whitespace-nowrap px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">Buah-buahan</a>
+                <a href="/category/snack" class="whitespace-nowrap px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">Snack</a>
+                <a href="/category/daging" class="whitespace-nowrap px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">Daging</a>
+                <a href="/category/seafood" class="whitespace-nowrap px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">Seafood</a>
+                <a href="/category/bumbu" class="whitespace-nowrap px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">Bumbu Dapur</a>
+            </div>
         </div>
     </div>
 </nav>

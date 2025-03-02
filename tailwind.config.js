@@ -1,20 +1,22 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
     content: [
-      "./resources/**/*.blade.php",
-      "./resources/**/*.js",
-      "./resources/**/*.vue",
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./resources/**/*.vue",
     ],
     theme: {
-      extend: {
-        colors: {
-          'dark': '#1A1A19',
-          'primary': '#31511E',
-          'secondary': '#859F3D',
-          'light': '#F6FCDF',
+        extend: {
+            colors: {
+                primary: "var(--color-primary)",
+                secondary: "var(--color-secondary)",
+                dark: "var(--color-dark)",
+                light: "var(--color-light)",
+                accent: "#ff7e1d",
+            },
+            fontFamily: {
+                sans: ["Inter", "sans-serif"],
+            },
         },
-      },
     },
     plugins: [],
-  }
-  
+};

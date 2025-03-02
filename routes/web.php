@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/tailwind-test', function () {
+    return view('tailwind-test');
+});
+
 Route::get('/category/{category}', function ($category) {
     // Logika untuk menampilkan produk berdasarkan kategori
     return view('category', ['category' => $category]);
