@@ -12,11 +12,11 @@
                         </svg>
                     </div>
                     <div>
-                        <span class="text-primary font-extrabold text-2xl">Mini<span class="text-secondary">Market</span></span>
+                        <span class="text-primary font-extrabold text-2xl">Market<span class="text-secondary"> Van Java</span></span>
                     </div>
                 </a>
                 
-                <!-- Search Bar - Desktop -->
+                {{-- <!-- Search Bar - Desktop -->
                 <div class="hidden md:block flex-grow mx-12 max-w-2xl">
                     <form action="/search" method="GET" class="relative">
                         <div class="relative">
@@ -34,7 +34,7 @@
                             </button>
                         </div>
                     </form>
-                </div>
+                </div> --}}
                 
                 <!-- Navigation Icons -->
                 <div class="flex items-center space-x-5">
@@ -105,7 +105,7 @@
                 </div>
             </div>
             
-            <!-- Search Bar - Mobile -->
+            {{-- <!-- Search Bar - Mobile -->
             <div class="md:hidden pb-4">
                 <form action="/search" method="GET" class="relative">
                     <div class="relative">
@@ -123,7 +123,7 @@
                         </button>
                     </div>
                 </form>
-            </div>
+            </div> --}}
         </div>
     </div>
     
@@ -190,7 +190,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                         </svg>
                     </div>
-                    <span class="text-primary font-bold text-xl">Mini<span class="text-secondary">Market</span></span>
+                    <span class="text-primary font-bold text-xl">Market<span class="text-secondary"> Van Java</span></span>
                 </a>
                 <button id="close-mobile-menu" class="text-gray-700 hover:text-primary p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

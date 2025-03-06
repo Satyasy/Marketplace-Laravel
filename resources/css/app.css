@@ -6,10 +6,10 @@
 /* Custom Variables */
 :root {
     --color-dark: #1a1a19;
-    --color-primary: #31511e;
-    --color-secondary: #859f3d;
-    --color-light: #f6fcdf;
-    --color-accent: #ff7e1d;
+    --color-primary: #C14600;
+    --color-secondary: #FF9D23;
+    --color-light: #E5D0AC;
+    --color-accent: #FEF9E1;
 }
 @keyframes slideDown {
     0% {

@@ -4,7 +4,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <!-- About -->
             <div>
-                <h3 class="text-xl font-bold mb-4">Mini<span class="text-secondary">Market</span></h3>
+                <h3 class="text-xl font-bold mb-4">Market<span class="text-secondary">Van Java</span></h3>
                 <p class="mb-4 text-gray-300">Belanja kebutuhan sehari-hari dengan mudah dan cepat. Kami menyediakan produk berkualitas dengan harga terbaik.</p>
                 <div class="flex space-x-4">
                     <a href="#" class="text-gray-300 hover:text-secondary">
