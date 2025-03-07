@@ -21,4 +21,13 @@ Route::get('/search', function () {
     return view('search', ['query' => $query]);
 });
 
+use App\Http\Controllers\ProductController;
+
+Route::resource('products', ProductController::class);
+
+use App\Http\Controllers\CategoryController;
+
+Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
+
+
 // Tambahkan route lain sesuai kebutuhan
