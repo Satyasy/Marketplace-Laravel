@@ -26,7 +26,7 @@
                                 <label class="form-label fw-bold mb-2">IMAGE</label>
 
                                 <div class="mb-3">
-                                    <img src="{{ Storage::disk('s3')->url('public/products/' . $product->image) }}"
+                                    <img src="{{ asset('storage/products/' . $product->image) }}" alt="{{ $product->title }}"
                                         class="img-thumbnail" style="width: 150px; height: 150px; object-fit: cover;">
                                 </div>
 
