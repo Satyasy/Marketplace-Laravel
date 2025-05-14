@@ -12,20 +12,37 @@ return new class extends Migration {
     {
         Schema::create('order_items', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('order_id')->constrained()->onDelete('cascade');
-            $table->foreignId('product_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('order_id');
+            $table->unsignedBigInteger('product_id');
             $table->integer('quantity');
             $table->decimal('price', 10, 2);
             $table->timestamps();
         });
-    }
 
+        // Tambahkan foreign keys secara terpisah setelah semua tabel ada
+        Schema::table('order_items', function (Blueprint $table) {
+            $table->foreign('order_id')
+                ->references('id')
+                ->on('orders')
+                ->onDelete('cascade');
+
+            $table->foreign('product_id')
+                ->references('id')
+                ->on('products')
+                ->onDelete('cascade');
+        });
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
+        Schema::table('order_items', function (Blueprint $table) {
+            $table->dropForeign(['order_id']);
+            $table->dropForeign(['product_id']);
+        });
+
         Schema::dropIfExists('order_items');
     }
 };
